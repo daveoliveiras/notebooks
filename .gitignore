@@ -1,0 +1,6 @@
+#Ignorando a pasta do composer
+vendor/
+
+#Ignorando a chave de acesso do Firebase
+firebase-key.json
+#.gitignore

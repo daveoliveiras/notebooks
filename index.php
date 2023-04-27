@@ -9,6 +9,15 @@
         <title>Notebooks</title>
     </head>
     <body>
+        <?php 
+            try
+            {
+                include "insert.php";
+            }
+            catch(Exception $e){
+                echo($e->getMessage());
+            }
+        ?>
         <script src="scripts/script.js"></script>
         <input type="button" value="Novo" onclick="openForm()"/>
         <table class="table">

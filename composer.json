@@ -1,0 +1,6 @@
+{
+    "require": {
+        "dompdf/dompdf": "^2.0",
+        "kreait/firebase-php": "^5.26"
+    }
+}

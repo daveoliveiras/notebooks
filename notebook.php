@@ -1,5 +1,5 @@
 <?php
-    class notebook{
+    class Notebook{
         private $id;
         private $ddr;
         private $foto;
@@ -16,8 +16,14 @@
         private $sistema;
         private $touch;
 
+        public function __construct(){}
+
         public function getModelo(){
             return $this->modelo;
+        }
+
+        public function setModelo($modelo){
+            $this->modelo = $modelo;
         }
     }
 ?>
