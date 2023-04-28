@@ -10,7 +10,7 @@
         private $description;
         private $placa;
         private $polegadas;
-
+        private $ram;
         private $clock;
         private $resolution;
         private $sistema;
@@ -18,12 +18,29 @@
 
         public function __construct(){}
 
-        public function getModelo(){
-            return $this->modelo;
+        public function getMarca(){
+            return $this->marca;
         }
 
-        public function setModelo($modelo){
-            $this->modelo = $modelo;
+        public function setMarca($marca){
+            $this->marca = $marca;
         }
+
+        public function getRAM(){
+            return $this->ram;
+        }
+
+        public function setRAM($ram){
+            $this->ram = $ram;
+        }
+
+        public function getSistema(){
+            return $this->sistema;
+        }
+
+        public function setSistema($sistema){
+            $this->sistema = $sistema;
+        }
+
     }
 ?>

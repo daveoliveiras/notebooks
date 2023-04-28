@@ -7,10 +7,11 @@
         <title>Notebooks</title>
     </head>
     <body>
-        <form>
-            <input type="text" id="marca" placeholder="Marca"/><br/>
+        <form method="post" action="insert.php">
+            <input type="text" id="marca" name="marca" placeholder="Marca"/><br/>
             <input type="text" id="modelo" placeholder="Modelo"/><br/>
-            <input type="text" id="sistema" placeholder="Sistema operacional"/><br/><br/>
+            <input type="text" id="ram" name="ram" placeholder="RAM"/><br/>
+            <input type="text" id="sistema" name="sistema" placeholder="Sistema operacional"/><br/><br/>
 
             <input type="text" id="processadorModelo" placeholder="Modelo do processador"/><br/>
             <input type="text" id="processadorMarca" placeholder="Marca do processador"/><br/>

@@ -1,16 +1,27 @@
 <?php
-    include "vendor/autoload.php";
     include "notebook.php";
-    use Kreait\Firebase\Factory;
-    use Kreait\Firebase\ServiceAccount;
+    include "connection.php";
+    
+    $arrayNotebook = [
+        "marca" => $_POST["marca"],
+        "sistema" => $_POST["sistema"],
+        "ram" => $_POST["ram"]
+    ];
 
-    $notebook = new Notebook();
+
+
+
+    $conn = new Connection();
+    $conn->insertNotebook($arrayNotebook);
+
+    /*
+    $notebook = $conn->createNotebook();
+    $notebook1 = $conn->createNotebook("1");
+
     //$notebook->setModelo($_POST["modelo"]);
-    $factory = (new Factory())
-        ->withServiceAccount("firebase-key.json")//Passando a chave para acessar
-        ->withDatabaseUri("https://controle-de-notebooks-default-rtdb.firebaseio.com/");
+    
+    echo $notebook->getMarca();
+    echo $notebook1->getMarca();*/
 
-    $database = $factory->createDatabase();
-    $notebook->setModelo($database->getReference("notebooks/0")->getSnapshot()->getValue()["modelo"]); 
-    echo $notebook->getModelo();
+    header("location: index.php");
 ?>
