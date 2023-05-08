@@ -1,0 +1,14 @@
+body{
+    margin:0;
+}
+
+#form-new{
+    /*background-color: aqua;*/
+    display: flex;
+    justify-content: center;
+}
+
+#form-new form{
+    
+    margin-top: 50px;
+}
