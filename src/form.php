@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles/style.css"/>
-        <link rel="icon" type="image/png" href="../content/lemon.png"/>
+        <link rel="icon" type="image/png" href="../content/peach.png"/>
         <title>Notebooks</title>
     </head>
     <body>
@@ -19,6 +19,7 @@
                     <input type="text" id="clock" name="clock" placeholder="Clock do processador"/><br/>
                 </div>
                 <input type="number" min="1" id="ram" name="ram" placeholder="RAM"/><br/>
+                <input type="number" min="1" id="hd" name="hd" placeholder="HD"/><br/>
                 <input type="file"/><br>                
                 <input type="submit" id="send" value="Enviar">
             </form>

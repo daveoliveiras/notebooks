@@ -14,6 +14,7 @@
         "sistema" => $_POST["sistema"],
         "processador" => $arrayProcessador,
         "ram" => $_POST["ram"],
+        "hd" => $_POST["hd"]
     ];
 
     $conn = new Connection();

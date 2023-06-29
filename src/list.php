@@ -4,7 +4,6 @@
     $list = $conn->createNotebook();
 ?>
 
-
 <table class="table">
     <thead>
         <tr>
@@ -16,8 +15,8 @@
         </tr>
     </thead>
     <tbody>
+        
         <?php if($list != null): foreach($list as $notebook): ?>
-
             <tr>
                 <th scope="row"><?php echo $notebook["id"]; ?></th>
                 <td><?php echo $notebook["marca"]; ?></td>
@@ -27,8 +26,11 @@
                     <input type="button" value="Ver mais" onclick="openNotebook(<?php echo $notebook['id'] ?>)"/>
                 </td>
             </tr>
-
-        <?php endforeach; endif; ?>
+        <?php endforeach; else:?>
+            <script>
+                alert('Sem registros')
+            </script>    
+        <?php endif; ?>
         
     </tbody>
 </table>
