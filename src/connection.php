@@ -5,7 +5,7 @@
     class Connection{
         private $database;
 
-        //Quando o objeto é criado já é feita a conexão com o Realtime Databse usando a chave
+        //Quando o objeto é criado já é feita a conexão com o Realtime Database usando a chave
         public function __construct(){
             $factory = (new Factory())
                             ->withServiceAccount("../firebase-key.json")
@@ -14,7 +14,7 @@
             $this->database = $factory->createDatabase();
         }
 
-        public function createNotebook(){
+        public function getNotebook(){
             switch(func_num_args()){
                 case 0: //Pega todos os notebooks
                     return $this->database->getReference("notebooks")->getValue();
@@ -24,12 +24,21 @@
             }
         }
 
+        /* Com o outro método o campo ID nem é mais necessário
         public function insertNotebook($notebook){
-            $list = $this->createNotebook();
+            $list = $this->getNotebook();
             if($list != null)
                 $this->database->getReference("notebooks/" . count($list))->set($notebook);
             else
                 $this->database->getReference("notebooks/0")->set($notebook);
+        }*/
+
+        public function insertNotebook($notebook, $key){
+            $this->database->getReference("notebooks/" . $key)->set($notebook);
+        }
+
+        public function deleteNotebook($key){
+            $this->database->getReference("notebooks/" . $key)->remove();
         }
     }
 ?>

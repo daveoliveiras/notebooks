@@ -9,7 +9,7 @@
     <body>
         <div id="form-new">
             <form method="post" action="insert.php" enctype="multipart/form-data">
-                <input type="number" id="id" name="id" placeholder="ID" /><br/>
+                <input type="number" id="key" name="key" placeholder="ID" /><br/>
                     <input type="text" id="marca" name="marca" placeholder="Marca" autocomplete="off"/><br/>
                     <input type="text" id="modelo" name="modelo" placeholder="Modelo"/><br/>
                     <input type="text" id="sistema" name="sistema" placeholder="Sistema operacional"/><br/>

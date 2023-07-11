@@ -8,7 +8,7 @@
     ];
     
     $arrayNotebook = [
-        "id" => $_POST["id"],
+        "key" => $_POST["key"],
         "marca" => $_POST["marca"],
         "modelo" => $_POST["modelo"],
         "sistema" => $_POST["sistema"],
@@ -18,7 +18,7 @@
     ];
 
     $conn = new Connection();
-    $conn->insertNotebook($arrayNotebook);
+    $conn->insertNotebook($arrayNotebook, $_POST["key"]);
 
     header("location: index.php");
 ?>
