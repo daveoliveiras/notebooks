@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles/style.css"/>
-        <link rel="icon" type="image/png" href="../content/peach.png"/>
+        <!--<link rel="icon" type="image/png" href="../content/peach.png"/>-->
         <title>Notebooks</title>
     </head>
     <body>
